@@ -1,0 +1,4 @@
+disnake==2.*
+requests==2.*
+python-dateutil==2.*
+psutil==5.*

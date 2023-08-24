@@ -1,0 +1,386 @@
+{
+    "splattershot jr.":{
+        "name":"Splattershot Jr.",
+        "class":"Shooter",
+        "sub":"Splat Bomb",
+        "special":"Big Bubbler",
+        "specialPoints":180,
+        "range":0.35,
+        "damage":0.22,
+        "baseDamage":28,
+        "fireRate":0.75,
+        "levelNeeded":0,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/1/1e/S3_Weapon_Main_Splattershot_Jr..png"
+        }
+    },
+    "custom splattershot jr.":{
+        "name":"Custom Splattershot Jr.",
+        "class":"Shooter",
+        "sub":"Torpedo",
+        "special":"Wave Breaker",
+        "specialPoints":180,
+        "range":0.35,
+        "damage":0.22,
+        "baseDamage":28,
+        "fireRate":0.75,
+        "levelNeeded":6,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/d/df/S3_Weapon_Main_Custom_Splattershot_Jr..png"
+        }
+    },
+    "splattershot":{
+        "name":"Splattershot",
+        "class":"Shooter",
+        "sub":"Suction Bomb",
+        "special":"Trizooka",
+        "specialPoints":200,
+        "range":0.50,
+        "damage":0.47,
+        "baseDamage":36,
+        "fireRate":0.60,
+        "levelNeeded":2,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/b/bf/S3_Weapon_Main_Splattershot.png/256px-S3_Weapon_Main_Splattershot.png"
+        }
+    },
+    "tentatek splattershot":{
+        "name":"Tentatek Splattershot",
+        "class":"Shooter",
+        "sub":"Splat Bomb",
+        "special":"Triple Inkstrike",
+        "specialPoints":190,
+        "range":0.50,
+        "damage":0.47,
+        "baseDamage":36,
+        "fireRate":0.60,
+        "levelNeeded":10,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/f/f1/S3_Weapon_Main_Tentatek_Splattershot.png"
+        }
+    },
+    "hero shot replica":{
+        "name":"Hero Shot Replica",
+        "class":"Shooter",
+        "sub":"Splat Bomb",
+        "special":"Triple Inkstrike",
+        "specialPoints":190,
+        "range":0.50,
+        "damage":0.47,
+        "baseDamage":36,
+        "fireRate":0.60,
+        "levelNeeded":"Needs to finish story mode",
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/2/24/S3_Weapon_Main_Hero_Shot_Replica.png/256px-S3_Weapon_Main_Hero_Shot_Replica.png"
+        }
+    },
+    "splattershot pro":{
+        "name":"Splattershot Pro",
+        "class":"Shooter",
+        "sub":"Angle Shooter",
+        "special":"Crab Tank",
+        "specialPoints":190,
+        "range":0.70,
+        "damage":0.60,
+        "baseDamage":42,
+        "fireRate":0.30,
+        "levelNeeded":9,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/7/77/S3_Weapon_Main_Splattershot_Pro.png/256px-S3_Weapon_Main_Splattershot_Pro.png"
+        }
+    },
+    "forge splattershot pro":{
+        "name":"Forge Splattershot Pro",
+        "class":"Shooter",
+        "sub":"Suction Bomb",
+        "special":"Booyah Bomb",
+        "specialPoints":210,
+        "range":0.70,
+        "damage":0.60,
+        "baseDamage":42,
+        "fireRate":0.30,
+        "levelNeeded":20,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/d/d8/S3_Weapon_Main_Forge_Splattershot_Pro.png/256px-S3_Weapon_Main_Forge_Splattershot_Pro.png"
+        }
+    },
+    "splattershot nova":{
+        "name":"Splattershot Nova",
+        "class":"Shooter",
+        "sub":"Point Sensor",
+        "special":"Killer Wail 5.1",
+        "specialPoints":200,
+        "range":0.68,
+        "damage":0.20,
+        "baseDamage":24,
+        "fireRate":0.60,
+        "levelNeeded":8,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/1/10/S3_Weapon_Main_Splattershot_Nova.png/256px-S3_Weapon_Main_Splattershot_Nova.png"
+        }
+    },
+    "sploosh-o-matic":{
+        "name":"Sploosh-o-matic",
+        "class":"Shooter",
+        "sub":"Curling Bomb",
+        "special":"Ultra Stamp",
+        "specialPoints":180,
+        "range":0.12,
+        "damage":0.52,
+        "baseDamage":38,
+        "fireRate":0.75,
+        "levelNeeded":9,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/5/59/S3_Weapon_Main_Sploosh-o-matic.png/256px-S3_Weapon_Main_Sploosh-o-matic.png"
+        }
+    },
+    "neo sploosh-o-matic":{
+        "name":"Neo Sploosh-o-matic",
+        "class":"Shooter",
+        "sub":"Squid Beakon",
+        "special":"Killer Wail 5.1",
+        "specialPoints":180,
+        "range":0.12,
+        "damage":0.52,
+        "baseDamage":38,
+        "fireRate":0.75,
+        "levelNeeded":13,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/c/c3/S3_Weapon_Main_Neo_Sploosh-o-matic.png"
+        }
+    },
+    "splash-o-matic":{
+        "name":"Splash-o-matic",
+        "class":"Shooter",
+        "sub":"Burst Bomb",
+        "special":"Crab Tank",
+        "specialPoints":200,
+        "range":0.42,
+        "damage":0.28,
+        "baseDamage":28,
+        "fireRate":0.75,
+        "levelNeeded":16,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/7/7b/S3_Weapon_Main_Splash-o-matic.png/256px-S3_Weapon_Main_Splash-o-matic.png"
+        }
+    },
+    ".52 gal":{
+        "name":".52 Gal",
+        "class":"Shooter",
+        "sub":"Splash Wall",
+        "special":"Killer Wail 5.1",
+        "specialPoints":200,
+        "range":0.55,
+        "damage":0.75,
+        "baseDamage":52,
+        "fireRate":0.25,
+        "levelNeeded":11,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/e/ed/S3_Weapon_Main_.52_Gal.png/256px-S3_Weapon_Main_.52_Gal.png"
+        }
+    },
+    ".96 gal":{
+        "name":".96 Gal",
+        "class":"Shooter",
+        "sub":"Sprinkler",
+        "special":"Ink Vac",
+        "specialPoints":200,
+        "range":0.74,
+        "damage":0.80,
+        "baseDamage":62,
+        "fireRate":0.10,
+        "levelNeeded":17,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/5/55/S3_Weapon_Main_.96_Gal.png/256px-S3_Weapon_Main_.96_Gal.png"
+        }
+    },
+    "n-zap '85":{
+        "name":"N-ZAP '85",
+        "class":"Shooter",
+        "sub":"Suction Bomb",
+        "special":"Tacticooler",
+        "specialPoints":190,
+        "range":0.50,
+        "damage":0.22,
+        "baseDamage":28,
+        "fireRate":0.75,
+        "levelNeeded":6,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/f/f6/S3_Weapon_Main_N-ZAP_%2785.png/256px-S3_Weapon_Main_N-ZAP_%2785.png"
+        }
+    },
+    "jet squelcher":{
+        "name":"Jet Squelcher",
+        "class":"Shooter",
+        "sub":"Angle Shooter",
+        "special":"Ink Vac",
+        "specialPoints":190,
+        "range":0.82,
+        "damage":0.35,
+        "baseDamage":32,
+        "fireRate":0.30,
+        "levelNeeded":15,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/6/69/S3_Weapon_Main_Jet_Squelcher.png/256px-S3_Weapon_Main_Jet_Squelcher.png"
+        }
+    },
+    "l-3 nozzlenose":{
+        "name":"L-3 Nozzlenose",
+        "class":"Shooter",
+        "sub":"Curling Bomb",
+        "special":"Crab Tank",
+        "specialPoints":200,
+        "range":0.62,
+        "damage":0.25,
+        "baseDamage":29,
+        "fireRate":0.65,
+        "levelNeeded":13,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/2/2c/S3_Weapon_Main_L-3_Nozzlenose.png/256px-S3_Weapon_Main_L-3_Nozzlenose.png"
+        }
+    },
+    "h-3 nozzlenose":{
+        "name":"H-3 Nozzlenose",
+        "class":"Shooter",
+        "sub":"Point Sensor",
+        "special":"Tacticooler",
+        "specialPoints":190,
+        "range":0.70,
+        "damage":0.58,
+        "baseDamage":29,
+        "fireRate":0.30,
+        "levelNeeded":24,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/thumb/5/5a/S3_Weapon_Main_H-3_Nozzlenose.png/256px-S3_Weapon_Main_H-3_Nozzlenose.png"
+        }
+    },
+    "squeezer":{
+        "name":"Squeezer",
+        "class":"Shooter",
+        "sub":"Splash Wall",
+        "special":"Trizooka",
+        "specialPoints":200,
+        "range":0.77,
+        "damage":0.52,
+        "baseDamage":"Tap Shot: 38\n\t\t\t\t\tHeld: 30",
+        "fireRate":0.30,
+        "levelNeeded":19,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/c/cb/S3_Weapon_Main_Squeezer.png"
+        }
+    },
+
+
+    "splat roller":{
+        "name":"Splat Roller",
+        "class":"Roller",
+        "sub":"Curling Bomb",
+        "special":"Big Bubbler",
+        "specialPoints":180,
+        "range":0.48,
+        "inkSpeed":0.45,
+        "handling":0.55,
+        "levelNeeded":2,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/c/c7/S3_Weapon_Main_Splat_Roller.png"
+        }
+    },
+    "carbon roller":{
+        "name":"Carbon Roller",
+        "class":"Roller",
+        "sub":"Auto Bomb",
+        "special":"Zip Caster",
+        "specialPoints":180,
+        "range":0.20,
+        "inkSpeed":0.63,
+        "handling":0.65,
+        "levelNeeded":6,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/2/21/S3_Weapon_Main_Carbon_Roller.png"
+        }
+    },
+    "carbon roller deco":{
+        "name":"Carbon Roller Deco",
+        "class":"Roller",
+        "sub":"Burst Bomb",
+        "special":"Trizooka",
+        "specialPoints":200,
+        "range":0.20,
+        "inkSpeed":0.63,
+        "handling":0.65,
+        "levelNeeded":22,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/7/72/S3_Weapon_Main_Carbon_Roller_Deco.png"
+        }
+    },
+    "dynamo roller":{
+        "name":"Dynamo Roller",
+        "class":"Roller",
+        "sub":"Sprinkler",
+        "special":"Tacticooler",
+        "specialPoints":190,
+        "range":0.76,
+        "inkSpeed":0.25,
+        "handling":0.20,
+        "levelNeeded":12,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/5/5e/S3_Weapon_Main_Dynamo_Roller.png"
+        }
+    },
+    "flingza roller":{
+        "name":"Flingza Roller",
+        "class":"Roller",
+        "sub":"Ink Mine",
+        "special":"Tenta Missiles",
+        "specialPoints":210,
+        "range":0.58,
+        "inkSpeed":0.45,
+        "handling":0.45,
+        "levelNeeded":20,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/d/d2/S3_Weapon_Main_Flingza_Roller.png"
+        }
+    },
+    "big swig roller":{
+        "name":"Big Swig Roller",
+        "class":"Roller",
+        "sub":"Splash Wall",
+        "special":"Ink Vac",
+        "specialPoints":200,
+        "range":0.56,
+        "inkSpeed":0.54,
+        "handling":0.60,
+        "levelNeeded":16,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/8/8e/S3_Weapon_Main_Big_Swig_Roller.png"
+        }
+    },
+    "splat charger":{
+        "name":"Splat Charger",
+        "class":"Charger",
+        "sub":"Splat Bomb",
+        "special":"Ink Vac",
+        "specialPoints":200,
+        "range":0.88,
+        "chargeSpd":0.50,
+        "mobility":0.40,
+        "levelNeeded":16,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/4/41/S3_Weapon_Main_Splat_Charger.png"
+        }
+    },
+    "z+f splat charger":{
+        "name":"Z+F Splat Charger",
+        "class":"Charger",
+        "sub":"Splash Wall",
+        "special":"Triple Inkstrike",
+        "specialPoints":210,
+        "range":0.88,
+        "chargeSpd":0.50,
+        "mobility":0.40,
+        "levelNeeded":16,
+        "image":{
+            "url":"https://cdn.wikimg.net/en/splatoonwiki/images/a/a6/S3_Weapon_Main_Z%2BF_Splat_Charger.png"
+        }
+    }
+}
