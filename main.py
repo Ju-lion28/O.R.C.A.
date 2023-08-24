@@ -4,7 +4,10 @@ import func.battles
 import func.wpn_stats
 from disnake.ext import commands
 
-token = "MTA1ODA1OTIyNjMyNjQ5OTQ2OQ.GE8tey.RNlyQ30t094C_USRtvLR7NGHE48_jDa6UgfKZk"
+with open('secrets.json', 'r') as openfile:
+    secrets = json.load(openfile)
+
+token = secrets['token']
 bot = commands.InteractionBot(
     command_sync_flags=commands.CommandSyncFlags.default(), reload=True)
 
