@@ -1,5 +1,6 @@
+.vscode
 secrets.json
 weapon.json
 poetry.lock
 desktop.ini
-func\__pycache__
+func/__pycache__

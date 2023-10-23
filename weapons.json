@@ -137,7 +137,7 @@
     "neo sploosh-o-matic":{
         "name":"Neo Sploosh-o-matic",
         "class":"Shooter",
-        "sub":"Squid Beakon",
+        "sub":"Squid Beacon",
         "special":"Killer Wail 5.1",
         "specialPoints":180,
         "range":0.12,

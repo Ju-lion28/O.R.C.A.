@@ -3,9 +3,10 @@ import json
 import func.battles
 import random
 
+
 def shooter_stats(weapon):
-    with open('weapons.json', 'r') as openfile:
-        wpn_data = json.load(openfile)
+    with open("weapons.json", "r") as open_file:
+        wpn_data = json.load(open_file)
 
     wpn_stats = wpn_data[weapon]
     colour = func.battles.rndColour()
@@ -24,22 +25,21 @@ Unlocked at Level:  {wpn_stats['levelNeeded']}
 ```"""
 
     weapon_embed = disnake.Embed(
-        title="Weapon Stats",
-        description=desc,
-        colour=colour[random.randint(0,1)]
+        title="Weapon Stats", description=desc, colour=colour[random.randint(0, 1)]
     )
 
-    weapon_embed.set_image(url=wpn_stats['image']['url'])
+    weapon_embed.set_image(url=wpn_stats["image"]["url"])
     weapon_embed.set_footer(
         text="Brought to you by your Omniscient Recording Computer of Alterna",
-        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925"
+        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925",
     )
-    
+
     return weapon_embed
 
+
 def roller_stats(weapon):
-    with open('weapons.json', 'r') as openfile:
-        wpn_data = json.load(openfile)
+    with open("weapons.json", "r") as open_file:
+        wpn_data = json.load(open_file)
 
     wpn_stats = wpn_data[weapon]
     colour = func.battles.rndColour()
@@ -57,22 +57,21 @@ Unlocked at Level:  {wpn_stats['levelNeeded']}
 ```"""
 
     weapon_embed = disnake.Embed(
-        title="Weapon Stats",
-        description=desc,
-        colour=colour[random.randint(0,1)]
+        title="Weapon Stats", description=desc, colour=colour[random.randint(0, 1)]
     )
 
-    weapon_embed.set_image(url=wpn_stats['image']['url'])
+    weapon_embed.set_image(url=wpn_stats["image"]["url"])
     weapon_embed.set_footer(
         text="Brought to you by your Omniscient Recording Computer of Alterna",
-        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925"
+        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925",
     )
-    
+
     return weapon_embed
 
+
 def charger_stats(weapon):
-    with open('weapons.json', 'r') as openfile:
-        wpn_data = json.load(openfile)
+    with open("weapons.json", "r") as open_file:
+        wpn_data = json.load(open_file)
 
     wpn_stats = wpn_data[weapon]
     colour = func.battles.rndColour()
@@ -90,15 +89,13 @@ Unlocked at Level:  {wpn_stats['levelNeeded']}
 ```"""
 
     weapon_embed = disnake.Embed(
-        title="Weapon Stats",
-        description=desc,
-        colour=colour[random.randint(0,1)]
+        title="Weapon Stats", description=desc, colour=colour[random.randint(0, 1)]
     )
 
-    weapon_embed.set_image(url=wpn_stats['image']['url'])
+    weapon_embed.set_image(url=wpn_stats["image"]["url"])
     weapon_embed.set_footer(
         text="Brought to you by your Omniscient Recording Computer of Alterna",
-        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925"
+        icon_url="https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925",
     )
-    
+
     return weapon_embed

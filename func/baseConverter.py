@@ -6,7 +6,7 @@ def base_conversion(number, source_base, target_base):
         if digit.isnumeric():
             digit_value = int(digit)
         else:
-            digit_value = ord(digit.upper()) - ord('A') + 10
+            digit_value = ord(digit.upper()) - ord("A") + 10
         decimal_number = decimal_number * source_base + digit_value
 
     result = ""
@@ -17,7 +17,7 @@ def base_conversion(number, source_base, target_base):
         if remainder < 10:
             result = str(remainder) + result
         else:
-            result = chr(ord('A') + remainder - 10) + result
+            result = chr(ord("A") + remainder - 10) + result
         decimal_number = decimal_number // target_base
 
     return result
