@@ -96,7 +96,7 @@ def getRegularStages():
     )
     stage1.set_author(
         name="CURRENT REGULAR BATTLE STAGES",
-        icon_url="https://cdn.wikimg.net/en/splatoonwiki/images/thumb/4/48/S2_Icon_Regular_Battle.svg/250px-S2_Icon_Regular_Battle.svg.png",
+        icon_url="https://cdn.wikimg.net/en/splatoonwiki/images/thumb/3/3c/S2_Icon_Regular_Battle_alt.svg/2048px-S2_Icon_Regular_Battle_alt.svg.png",
     )
     stage1.set_footer(
         text="Brought to you by your Omniscient Recording Computer of Alterna",
@@ -118,7 +118,7 @@ def getRegularStages():
     )
     stage2.set_author(
         name="CURRENT REGULAR BATTLE STAGES",
-        icon_url="https://cdn.wikimg.net/en/splatoonwiki/images/thumb/4/48/S2_Icon_Regular_Battle.svg/250px-S2_Icon_Regular_Battle.svg.png",
+        icon_url="https://cdn.wikimg.net/en/splatoonwiki/images/thumb/3/3c/S2_Icon_Regular_Battle_alt.svg/2048px-S2_Icon_Regular_Battle_alt.svg.png",
     )
     stage2.set_footer(
         text="Brought to you by your Omniscient Recording Computer of Alterna",
