@@ -60,12 +60,12 @@ def iso2epoch(iso):
     return int(dp.parse(iso).timestamp())
 
 
-def getRegularStages():
+def getRegularStages(node: int = 0):
     json_data = reload()
-    stages = json_data["data"]["regularSchedules"]["nodes"][0]["regularMatchSetting"][
+    stages = json_data["data"]["regularSchedules"]["nodes"][node]["regularMatchSetting"][
         "vsStages"
     ]
-    mode = json_data["data"]["regularSchedules"]["nodes"][0]["regularMatchSetting"][
+    mode = json_data["data"]["regularSchedules"]["nodes"][node]["regularMatchSetting"][
         "vsRule"
     ]
 
@@ -76,8 +76,8 @@ def getRegularStages():
 
     turfImages = getImages(stageImgId1, stageImgId2)
 
-    startTime = json_data["data"]["regularSchedules"]["nodes"][0]["startTime"]
-    endTime = json_data["data"]["regularSchedules"]["nodes"][0]["endTime"]
+    startTime = json_data["data"]["regularSchedules"]["nodes"][node]["startTime"]
+    endTime = json_data["data"]["regularSchedules"]["nodes"][node]["endTime"]
 
     colour = rndColour()
 
@@ -130,7 +130,7 @@ def getRegularStages():
     return stageEmbeds
 
 
-def getAnarchyStages(isSeriesOpen):
+def getAnarchyStages(isSeriesOpen: bool, node: int = 0):
     json_data = reload()
     if isSeriesOpen:
         matchType = 1
@@ -139,10 +139,10 @@ def getAnarchyStages(isSeriesOpen):
 
     anarchyDict = ["**SERIES**", "**OPEN**"]
 
-    stages = json_data["data"]["bankaraSchedules"]["nodes"][0]["bankaraMatchSettings"][
+    stages = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][
         matchType
     ]["vsStages"]
-    mode = json_data["data"]["bankaraSchedules"]["nodes"][0]["bankaraMatchSettings"][
+    mode = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][
         matchType
     ]["vsRule"]
 
@@ -154,8 +154,8 @@ def getAnarchyStages(isSeriesOpen):
     )
     anarchyImages = getImages(stageId1, stageId2)
 
-    startTime = json_data["data"]["bankaraSchedules"]["nodes"][0]["startTime"]
-    endTime = json_data["data"]["bankaraSchedules"]["nodes"][0]["endTime"]
+    startTime = json_data["data"]["bankaraSchedules"]["nodes"][node]["startTime"]
+    endTime = json_data["data"]["bankaraSchedules"]["nodes"][node]["endTime"]
 
     colour = rndColour()
 
@@ -211,11 +211,11 @@ def getAnarchyStages(isSeriesOpen):
     return stageEmbeds
 
 
-def getXBattles():
+def getXBattles(node: int = 0):
     json_data = reload()
 
-    stages = json_data["data"]["xSchedules"]["nodes"][0]["xMatchSetting"]["vsStages"]
-    mode = json_data["data"]["xSchedules"]["nodes"][0]["xMatchSetting"]["vsRule"]
+    stages = json_data["data"]["xSchedules"]["nodes"][node]["xMatchSetting"]["vsStages"]
+    mode = json_data["data"]["xSchedules"]["nodes"][node]["xMatchSetting"]["vsRule"]
 
     stageName1, stageName2, stageId1, stageId2 = (
         stages[0]["name"],
@@ -225,8 +225,8 @@ def getXBattles():
     )
     xImages = getImages(stageId1, stageId2)
 
-    startTime = json_data["data"]["xSchedules"]["nodes"][0]["startTime"]
-    endTime = json_data["data"]["xSchedules"]["nodes"][0]["endTime"]
+    startTime = json_data["data"]["xSchedules"]["nodes"][node]["startTime"]
+    endTime = json_data["data"]["xSchedules"]["nodes"][node]["endTime"]
 
     colour = rndColour()
 
@@ -282,31 +282,23 @@ def getXBattles():
     return stageEmbeds
 
 
-def getSalmon():
+def getSalmon(node: int = 0):
     json_data = reload()
 
-    stage = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][0][
-        "setting"
-    ]["coopStage"]
+    stage = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][node]["setting"]["coopStage"]
     stageName, stageImage = stage["name"], stage["image"]["url"]
-    wpn = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][0][
-        "setting"
-    ]["weapons"]
+    wpn = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][node]["setting"]["weapons"]
 
-    weaponsArray = []
+    weaponsArray = [[wpn[weapon]["name"], wpn[weapon]["image"]["url"]] for weapon in range(len(wpn))]
 
-    for weapon in range(len(wpn)):
-        weaponName = wpn[weapon]["name"]
-        weaponImage = wpn[weapon]["image"]["url"]
+    # for weapon in range(len(wpn)):
+    #     weaponName = wpn[weapon]["name"]
+    #     weaponImage = wpn[weapon]["image"]["url"]
 
-        weaponsArray.append([weaponName, weaponImage])
+    #     weaponsArray.append([weaponName, weaponImage])
 
-    startTime = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][
-        0
-    ]["startTime"]
-    endTime = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][0][
-        "endTime"
-    ]
+    startTime = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][node]["startTime"]
+    endTime = json_data["data"]["coopGroupingSchedule"]["regularSchedules"]["nodes"][node]["endTime"]
 
     URL = "https://splatoon3.ink/salmonrun"
 

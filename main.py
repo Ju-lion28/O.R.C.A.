@@ -1,3 +1,4 @@
+import os
 import json
 import random
 import disnake
@@ -78,16 +79,50 @@ async def stages(
     ),
 ):
     if mode == "turf":
-        await ctx.send(embeds=func.battles.getRegularStages())
+        await ctx.send(embeds=func.battles.getRegularStages(),
+                       components=[disnake.ui.Button(label="Next", 
+                                                     style=disnake.ButtonStyle.success, 
+                                                     custom_id="nextTurf"
+                                                     )])
     elif mode == "open":
-        await ctx.send(embeds=func.battles.getAnarchyStages(True))
+        await ctx.send(embeds=func.battles.getAnarchyStages(True),
+                       components=[disnake.ui.Button(label="Next", 
+                                                     style=disnake.ButtonStyle.success, 
+                                                     custom_id="nextOpen"
+                                                     )])
     elif mode == "series":
-        await ctx.send(embeds=func.battles.getAnarchyStages(False))
+        await ctx.send(embeds=func.battles.getAnarchyStages(False),
+                       components=[disnake.ui.Button(label="Next", 
+                                                     style=disnake.ButtonStyle.success, 
+                                                     custom_id="nextSeries"
+                                                     )])
     elif mode == "xbattle":
-        await ctx.send(embeds=func.battles.getXBattles())
+        await ctx.send(embeds=func.battles.getXBattles(),
+                       components=[disnake.ui.Button(label="Next", 
+                                                     style=disnake.ButtonStyle.success, 
+                                                     custom_id="nextX"
+                                                     )])
     elif mode == "salmon":
-        await ctx.send(embeds=func.battles.getSalmon())
+        await ctx.send(embeds=func.battles.getSalmon(),
+                       components=[disnake.ui.Button(label="Next", 
+                                                     style=disnake.ButtonStyle.success, 
+                                                     custom_id="nextSalmon"
+                                                     )])
 
+
+@bot.listen("on_button_click")
+async def next_listener(inter: disnake.MessageInteraction):
+    if inter.component.custom_id not in ['nextTurf','nextOpen','nextSeries','nextX','nextSalmon']:
+        return
+    else:
+        node = 1
+
+    if inter.component.custom_id == 'nextTurf':
+        await inter.response.send_message(embeds=func.battles.getRegularStages(node = node),
+                                          components=[disnake.ui.Button(label="Next", 
+                                                                        style=disnake.ButtonStyle.success, 
+                                                                        custom_id="nextTurf"
+                                                                        )])
 
 @bot.slash_command(
     name="rotation_summary",
