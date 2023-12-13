@@ -118,11 +118,15 @@ async def next_listener(inter: disnake.MessageInteraction):
         node = 1
 
     if inter.component.custom_id == 'nextTurf':
-        await inter.response.send_message(embeds=func.battles.getRegularStages(node = node),
-                                          components=[disnake.ui.Button(label="Next", 
-                                                                        style=disnake.ButtonStyle.success, 
-                                                                        custom_id="nextTurf"
-                                                                        )])
+        await inter.response.send_message(embeds=func.battles.getRegularStages(node))
+    if inter.component.custom_id == 'nextOpen':
+        await inter.response.send_message(embeds=func.battles.getAnarchyStages(isSeriesOpen=True, node = node))
+    if inter.component.custom_id == 'nextSeries':
+        await inter.response.send_message(embeds=func.battles.getAnarchyStages(isSeriesOpen=False, node = node))
+    if inter.component.custom_id == 'nextX':
+        await inter.response.send_message(embeds=func.battles.getXBattles(node = node))
+    if inter.component.custom_id == 'nextSalmon':
+        await inter.response.send_message(embeds=func.battles.getSalmon(node = node))
 
 @bot.slash_command(
     name="rotation_summary",

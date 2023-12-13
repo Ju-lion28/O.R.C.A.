@@ -139,12 +139,8 @@ def getAnarchyStages(isSeriesOpen: bool, node: int = 0):
 
     anarchyDict = ["**SERIES**", "**OPEN**"]
 
-    stages = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][
-        matchType
-    ]["vsStages"]
-    mode = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][
-        matchType
-    ]["vsRule"]
+    stages = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][matchType]["vsStages"]
+    mode = json_data["data"]["bankaraSchedules"]["nodes"][node]["bankaraMatchSettings"][matchType]["vsRule"]
 
     stageName1, stageName2, stageId1, stageId2 = (
         stages[0]["name"],
