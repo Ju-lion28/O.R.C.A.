@@ -3,4 +3,4 @@ secrets.json
 weapon.json
 poetry.lock
 desktop.ini
-func/__pycache__/
+__pycache__/
