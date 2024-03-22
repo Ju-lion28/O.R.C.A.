@@ -116,7 +116,7 @@ async def stages(
             "X Battles": "xbattle",
             "Salmon Run": "salmon",
         }
-    ),
+    ), # type: ignore
 ):
     if mode == "turf":
         await ctx.send(embeds=func.battles.getRegularStages(),
@@ -144,8 +144,8 @@ async def stages(
                                                      )])
     elif mode == "salmon":
         await ctx.send(embeds=func.battles.getSalmon(),
-                       components=[disnake.ui.Button(label="Next", 
-                                                     style=disnake.ButtonStyle.success, 
+                       components=[disnake.ui.Button(label="Next",
+                                                     style=disnake.ButtonStyle.success,
                                                      custom_id="nextSalmon"
                                                      )])
 
@@ -176,7 +176,7 @@ async def summary(ctx):
     await ctx.send(embed=func.battles.getSummary())
 
 
-# ============================================================== WEAPON STATS ==============================================================
+# ========================== WEAPON STATS =================
 with open("weapons.json", "r") as open_file:
     wpn_data = json.load(open_file)
 
@@ -195,17 +195,17 @@ async def weapon(ctx):
 
 
 @weapon.sub_command(name="shooters", description="Stats for shooters")
-async def shooters(ctx, weapon: theChoices("Shooter")):
+async def shooters(ctx, weapon: theChoices("Shooter")): # type: ignore
     await ctx.send(embed=func.wpn_stats.shooter_stats(weapon))
 
 
 @weapon.sub_command(name="rollers", description="Stats for rollers")
-async def rollers(ctx, weapon: theChoices("Roller")):
+async def rollers(ctx, weapon: theChoices("Roller")): # type: ignore
     await ctx.send(embed=func.wpn_stats.roller_stats(weapon))
 
 
 @weapon.sub_command(name="chargers", description="Stats for Chargers")
-async def chargers(ctx, weapon: theChoices("Charger")):
+async def chargers(ctx, weapon: theChoices("Charger")): # type: ignore
     await ctx.send(embed=func.wpn_stats.charger_stats(weapon))
 
 
