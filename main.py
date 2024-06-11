@@ -63,7 +63,7 @@ async def help(ctx):
             "icon_url": "https://static.wikia.nocookie.net/splatoon/images/e/e0/O.R.C.A._logo.png/revision/latest?cb=20221009143925",
         },
     }
-    await ctx.send(embed=disnake.Embed.from_dict(embed_dict))
+    await ctx.send(embed=disnake.Embed.from_dict(embed_dict)) # type: ignore
 
 
 # # Subclassing the modal.
@@ -104,6 +104,7 @@ async def help(ctx):
 #     """Sends a Modal to create a tag."""
 #     await inter.response.send_modal(modal=MyModal())
 
+
 # ================================================================ STAGES ==============================================================
 @bot.slash_command(name="current_stages", description="Get the current battle stages")
 async def stages(
@@ -116,57 +117,91 @@ async def stages(
             "X Battles": "xbattle",
             "Salmon Run": "salmon",
         }
-    ), # type: ignore
+    ),  # type: ignore
 ):
     if mode == "turf":
-        await ctx.send(embeds=func.battles.getRegularStages(),
-                       components=[disnake.ui.Button(label="Next", 
-                                                     style=disnake.ButtonStyle.success, 
-                                                     custom_id="nextTurf"
-                                                     )])
+        await ctx.send(
+            embeds=func.battles.getRegularStages(),
+            components=[
+                disnake.ui.Button(
+                    label="Next",
+                    style=disnake.ButtonStyle.success,
+                    custom_id="nextTurf",
+                )
+            ],
+        )
     elif mode == "open":
-        await ctx.send(embeds=func.battles.getAnarchyStages(True),
-                       components=[disnake.ui.Button(label="Next", 
-                                                     style=disnake.ButtonStyle.success, 
-                                                     custom_id="nextOpen"
-                                                     )])
+        await ctx.send(
+            embeds=func.battles.getAnarchyStages(True),
+            components=[
+                disnake.ui.Button(
+                    label="Next",
+                    style=disnake.ButtonStyle.success,
+                    custom_id="nextOpen",
+                )
+            ],
+        )
     elif mode == "series":
-        await ctx.send(embeds=func.battles.getAnarchyStages(False),
-                       components=[disnake.ui.Button(label="Next", 
-                                                     style=disnake.ButtonStyle.success, 
-                                                     custom_id="nextSeries"
-                                                     )])
+        await ctx.send(
+            embeds=func.battles.getAnarchyStages(False),
+            components=[
+                disnake.ui.Button(
+                    label="Next",
+                    style=disnake.ButtonStyle.success,
+                    custom_id="nextSeries",
+                )
+            ],
+        )
     elif mode == "xbattle":
-        await ctx.send(embeds=func.battles.getXBattles(),
-                       components=[disnake.ui.Button(label="Next", 
-                                                     style=disnake.ButtonStyle.success, 
-                                                     custom_id="nextX"
-                                                     )])
+        await ctx.send(
+            embeds=func.battles.getXBattles(),
+            components=[
+                disnake.ui.Button(
+                    label="Next", style=disnake.ButtonStyle.success, custom_id="nextX"
+                )
+            ],
+        )
     elif mode == "salmon":
-        await ctx.send(embeds=func.battles.getSalmon(),
-                       components=[disnake.ui.Button(label="Next",
-                                                     style=disnake.ButtonStyle.success,
-                                                     custom_id="nextSalmon"
-                                                     )])
+        await ctx.send(
+            embeds=func.battles.getSalmon(),
+            components=[
+                disnake.ui.Button(
+                    label="Next",
+                    style=disnake.ButtonStyle.success,
+                    custom_id="nextSalmon",
+                )
+            ],
+        )
 
 
 @bot.listen("on_button_click")
 async def next_listener(inter: disnake.MessageInteraction):
-    if inter.component.custom_id not in ['nextTurf','nextOpen','nextSeries','nextX','nextSalmon']:
+    if inter.component.custom_id not in [
+        "nextTurf",
+        "nextOpen",
+        "nextSeries",
+        "nextX",
+        "nextSalmon",
+    ]:
         return
     else:
         node = 1
 
-    if inter.component.custom_id == 'nextTurf':
+    if inter.component.custom_id == "nextTurf":
         await inter.response.send_message(embeds=func.battles.getRegularStages(node))
-    if inter.component.custom_id == 'nextOpen':
-        await inter.response.send_message(embeds=func.battles.getAnarchyStages(isSeriesOpen=True, node = node))
-    if inter.component.custom_id == 'nextSeries':
-        await inter.response.send_message(embeds=func.battles.getAnarchyStages(isSeriesOpen=False, node = node))
-    if inter.component.custom_id == 'nextX':
-        await inter.response.send_message(embeds=func.battles.getXBattles(node = node))
-    if inter.component.custom_id == 'nextSalmon':
-        await inter.response.send_message(embeds=func.battles.getSalmon(node = node))
+    if inter.component.custom_id == "nextOpen":
+        await inter.response.send_message(
+            embeds=func.battles.getAnarchyStages(isSeriesOpen=True, node=node)
+        )
+    if inter.component.custom_id == "nextSeries":
+        await inter.response.send_message(
+            embeds=func.battles.getAnarchyStages(isSeriesOpen=False, node=node)
+        )
+    if inter.component.custom_id == "nextX":
+        await inter.response.send_message(embeds=func.battles.getXBattles(node=node))
+    if inter.component.custom_id == "nextSalmon":
+        await inter.response.send_message(embeds=func.battles.getSalmon(node=node))
+
 
 @bot.slash_command(
     name="rotation_summary",
@@ -176,7 +211,7 @@ async def summary(ctx):
     await ctx.send(embed=func.battles.getSummary())
 
 
-# ========================== WEAPON STATS =================
+# ================ WEAPON STATS =================>
 with open("weapons.json", "r") as open_file:
     wpn_data = json.load(open_file)
 
@@ -195,17 +230,17 @@ async def weapon(ctx):
 
 
 @weapon.sub_command(name="shooters", description="Stats for shooters")
-async def shooters(ctx, weapon: theChoices("Shooter")): # type: ignore
+async def shooters(ctx, weapon: theChoices("Shooter")):  # type: ignore
     await ctx.send(embed=func.wpn_stats.shooter_stats(weapon))
 
 
 @weapon.sub_command(name="rollers", description="Stats for rollers")
-async def rollers(ctx, weapon: theChoices("Roller")): # type: ignore
+async def rollers(ctx, weapon: theChoices("Roller")):  # type: ignore
     await ctx.send(embed=func.wpn_stats.roller_stats(weapon))
 
 
 @weapon.sub_command(name="chargers", description="Stats for Chargers")
-async def chargers(ctx, weapon: theChoices("Charger")): # type: ignore
+async def chargers(ctx, weapon: theChoices("Charger")):  # type: ignore
     await ctx.send(embed=func.wpn_stats.charger_stats(weapon))
 
 
